@@ -4,3 +4,10 @@ logs
 .env
 package-lock.json
 com.chino.touchbaremulator.plugin/backend
+
+# Local build products and rollback snapshots
+.DS_Store
+/backups/
+/*.flexplugin
+!/com.chino.touchbaremulator.flexplugin
+/com.chino.touchbaremulator.plugin/resources/TouchBarBridgeHelper.app/

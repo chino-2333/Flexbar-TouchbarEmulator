@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "rollup -c",
+    "build": "node scripts/build-helper.cjs && rollup -c",
+    "helper:build": "node scripts/build-helper.cjs",
     "dev": "npm-run-all plugin:unlink plugin:link -p plugin:watch plugin:debug",
     "plugin:watch": "rollup -c -w --watch.onEnd=\"npm run plugin:restart\"",
     "plugin:unlink": "flexcli plugin unlink --uuid com.chino.touchbaremulator --silent",
@@ -23,6 +24,6 @@
     "rollup": "^4.0.2"
   },
   "dependencies": {
-    "@eniac/flexdesigner": "^1.0.7"
+    "@eniac/flexdesigner": "^1.0.1"
   }
 }
